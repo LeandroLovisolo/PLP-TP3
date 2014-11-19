@@ -1,0 +1,11 @@
+# LaTeX
+*.aux
+*.log
+*.out
+*.pdf
+
+# Bundle
+*.tar.gz
+
+# Vim
+*.swp
