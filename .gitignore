@@ -3,6 +3,7 @@
 *.log
 *.out
 *.pdf
+tex/PLP-TP3.st.txt
 
 # Bundle
 *.tar.gz
