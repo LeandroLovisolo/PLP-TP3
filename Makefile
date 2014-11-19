@@ -19,6 +19,7 @@ bundle: clean informe.pdf
 
 clean: clean-tex
 	rm -rf informe.pdf $(BUNDLE) $(BUNDLE_DIR)
+	find . -type f -name *.swp -delete
 
 clean-tex:
 	make -C tex clean
