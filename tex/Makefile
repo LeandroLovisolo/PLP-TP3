@@ -1,9 +1,9 @@
-.PHONY: all clean
+.PHONY: all clean PLP-TP3.st.txt
 
 all: informe.pdf
 
 PLP-TP3.st.txt:
-	iconv -f utf8 -t ascii//TRANSLIT < ../PLP-TP3.st | tr -cd '\11\12\15\40-\176' | sed s/\\r/\\n/g > PLP-TP3.st.txt
+	cat ../PLP-TP3.st | tr '\r' '\n' | tr -d '\0\f' | sed '1s/^.//' > PLP-TP3.st.txt
 
 informe.pdf: informe.tex PLP-TP3.st.txt
 	pdflatex -interaction=nonstopmode -halt-on-error informe.tex && \
